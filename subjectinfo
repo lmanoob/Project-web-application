@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Student Management System</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+    </head>
+    <body class="p-3">
+        <form name ="Student" method ="POST" action="studentdb.php">
+
+            <div class ="container">
+            <div class ="row">
+            
+            <div class = "col-sm-4">
+            <h2 class ="bg-secondary font-weight-bold text-white"><b> Course Information</b></h2>
+            <hr class="mb-3">
+            
+            <table border=20 class="btn-secondary display-5 font-weight-bold">
+                <tr><td>Subject ID:</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+                <option Value = "space"></option>
+                <option Value = "Maths">Ma</option>
+                <option Value = "Science">Sc</option>
+                <option Value = "English">Eng</option>
+                <option Value = "Melayu">Bm</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Subject Name :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+                <option Value = "space"></option>
+                <option Value = "Maths">Maths</option>
+                <option Value = "Science">Science</option>
+                <option Value = "English">English</option>
+                <option Value = "Melayu">Melayu</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Subject description :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+                <option Value = "space"></option>
+                <option Value = "Maths">its Maths... worst subject ever</option>
+                <option Value = "Science">Chapter 4 hehehehehehhe</option>
+                <option Value = "English">Brit-ish?</option>
+                <option Value = "Melayu">Surprise?</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Subject Name :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+                <option Value = "space"></option>
+                <option Value = "Maths">4.00</option>
+                <option Value = "Science">4.00</option>
+                <option Value = "English">2.00</option>
+                <option Value = "Melayu">2.00</option>
+            </select>
+            </td></tr>    
+
+            </table>
+            
+        </form>
+    </body>
+</html>
