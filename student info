@@ -32,6 +32,9 @@
                     <tr><td>Phone Num:</td><td><input type="text" name="phonenum" id="phoneid"
                         style="width: 200px; text-align:right" value = ""></td></tr>
 
+                    <tr><td>Password</td><td><input type="text" name="stupass" id="stupassid"
+                        style="width: 200px; text-align:right" value = ""></td></tr>    
+
             
             </table>
             
