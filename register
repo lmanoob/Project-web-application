@@ -58,15 +58,6 @@
 	<input type="reset" value="Clear Enteries" >
     <br><br>
 
-    Name: <p id="nama"></p>
-    Address:<p id="alamat"></p>
-    City:<p id="tempat"></p>
-    State:<p id="stute"></p>
-    Gender:<p id="tahun"></p>
-    Program:<p id="lawyat"></p>
-    Age:<p id="umur"></p>
-    Phone:<p id="nombor"></p>
-    Total from calculation = <p id="cal"></p>
 
 </table>
 </form>
