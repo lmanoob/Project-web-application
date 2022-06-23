@@ -13,11 +13,11 @@
             <div class ="row">
             
             <div class = "col-sm-4">
-            <h2 class ="bg-secondary font-weight-bold text-white"><b> Student Details</b></h2>
+            <h2 class ="bg-secondary font-weight-bold text-white"><b> Teacher Details</b></h2>
             <hr class="mb-3">
             
             <table border=20 class="btn-secondary display-5 font-weight-bold">
-                <tr><td>Student ID:</td><td><input type="text" name="StudentID" id="studentid"
+                <tr><td>Teacher ID:</td><td><input type="text" name="teacherID" id="teacherid"
                     style="width: 200px; text-align:right" value = ""></td></tr>
 
                     <tr><td>First Name:</td><td><input type="text" name="firstname" id="firstid"
@@ -32,9 +32,8 @@
                     <tr><td>Phone Num:</td><td><input type="text" name="phonenum" id="phoneid"
                         style="width: 200px; text-align:right" value = ""></td></tr>
 
-                    <tr><td>Password</td><td><input type="text" name="stupass" id="stupassid"
-                        style="width: 200px; text-align:right" value = ""></td></tr>    
-
+                        <tr><td>Password:</td><td><input type="text" name="teapass" id="teapasid"
+                            style="width: 200px; text-align:right" value = ""></td></tr>
             
             </table>
             
