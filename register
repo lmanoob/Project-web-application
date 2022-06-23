@@ -15,7 +15,7 @@
                 <div class = "col-sm-4">
                 <h2 class ="bg-secondary font-weight-bold text-white"><b> Student registeration</b></h2>
                 <hr class="mb-3">
-	<h4>Step 1: Enter your cridentials:</h4>
+	<h4>Enter your credentials:</h4>
     <table border=20 class="btn-secondary display-5 font-weight-bold">
         <tr><td>First Name:</td><td><input name="student" type="text" size= 50></td></tr>
         <tr><td>Last Name: </td><td><input name="student" type="text" size= 50></td></tr>
@@ -50,9 +50,13 @@
             <option value = "Other">Other</option>
             </select>
         
-            <tr><td>Age:</td><td><input name= "age" type="text" size=10><br>
-                <tr><td>Phone:</td><td><input name= "phone" type="text" size=50>
-	
+            <tr><td>Age:</td><td><input name= "age" type="text" size=10></td></tr>
+                <tr><td>Phone:</td><td><input name= "phone" type="text" size=50></td></tr>
+
+    
+            <tr><td>Password:</td><td><input name= "password" type="text" size=10></td></tr>
+            
+
 	<br><br>
 	<input type="button" value="Submit" onclick= "doSubmit()">
 	<input type="reset" value="Clear Enteries" >
