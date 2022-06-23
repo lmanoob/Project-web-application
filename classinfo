@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Student Management System</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+    </head>
+    <body class="p-3">
+        <form name ="Student" method ="POST" action="studentdb.php">
+
+            <div class ="container">
+            <div class ="row">
+            
+            <div class = "col-sm-4">
+            <h2 class ="bg-secondary font-weight-bold text-white"><b> Class Information</b></h2>
+            <hr class="mb-3">
+            
+            <table border=20 class="btn-secondary display-5 font-weight-bold">
+                <tr><td>Class ID:</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+                <option Value = "space"></option>
+                <option Value = "1A">1A</option>
+                <option Value = "5B">5B</option>
+                <option Value = "4C">4C</option>
+                <option Value = "2D">2D</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Class Name :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+              <option Value = "space"></option>
+              <option Value = "1A">Pythagoras</option>
+              <option Value = "5B">Theodore labtory</option>
+              <option Value = "4C">Stephen King</option>
+              <option Value = "2D">Hang Tuah</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Number of students :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+              <option Value = "space"></option>
+              <option Value = "1A">30</option>
+              <option Value = "5B">31</option>
+              <option Value = "4C">42</option>
+              <option Value = "2D">35</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Subject code :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+              <option Value = "space"></option>
+              <option Value = "1A">Ma</option>
+              <option Value = "1B">Sc</option>
+              <option Value = "1C">Eng</option>
+              <option Value = "1D">Bm</option>
+            </select>
+            </td></tr>
+
+            <tr><td>Teacher ID :</td><td><select name ="subjectid" id="isubjectid" style= "width: 200px; margin: 2px;
+                text-align:right">
+               <option Value = "space"></option>
+               <option Value = "1A">12342</option>
+               <option Value = "1B">43241</option>
+               <option Value = "1C">43242</option>
+               <option Value = "1D">64334</option>
+            </select>
+            </td></tr>    
+
+            </table>
+            
+        </form>
+    </body>
+</html>
