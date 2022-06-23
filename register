@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <title>Student Management System</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+    </head>
+    <body class="p-3">
+        <form name ="Student" method ="POST" action="studentdb.php">
+            <div class ="container">
+                <div class ="row">
+                
+                <div class = "col-sm-4">
+                <h2 class ="bg-secondary font-weight-bold text-white"><b> Student registeration</b></h2>
+                <hr class="mb-3">
+	<h4>Step 1: Enter your cridentials:</h4>
+    <table border=20 class="btn-secondary display-5 font-weight-bold">
+        <tr><td>First Name:</td><td><input name="student" type="text" size= 50></td></tr>
+        <tr><td>Last Name: </td><td><input name="student" type="text" size= 50></td></tr>
+        <tr><td>Email: </td><td><input name="student" type="text" size= 50></td></tr>
+        <tr><td>Address:</td><td><input name="address" type="text" size=50></td></tr>
+        <tr><td>City:</td><td><input name="city" type="text" size=16></td></tr>
+        <tr><td>State:</td><td> <select name ="state" id="stateid" style= "width: 200px; margin: 2px;
+        text-align:right">
+	<option value = "Johor">Johor</option>
+	<option value = "Melaka">Melaka</option>
+	<option value = "Negeri Sembilan">Negeri Sembilan</option>
+	<option value = "Selangor">Selangor</option>
+	<option value = "Kuala Lumpur">Kuala Lumpur</option>
+	<option value = "Putrajaya">Putrajaya</option>
+	<option value = "Perak">Perak</option>
+	<option value = "Pulau Pinang">Pulau Pinang</option>
+	<option value = "Kedah">Kedah</option>
+	<option value = "Perlis">Perlis</option>
+	<option value = "Kelantan">Kelantan</option>
+	<option value = "Terengganu">Terengganu</option>
+	<option value = "Pahang">Pahang</option>
+	<option value = "Sabah">Sabah</option>
+	<option value = "Sarawak">Sarawak</option>
+	<option value = "Alaska">Alaska</option>
+	</select>
+</td></tr> 
+
+        <tr><td>Gender: </td><td><select name = "gender" id="stateid" style= "width: 200px; margin: 2px;
+        text-align:right">
+            <option value = "Male">Male</option>
+            <option value = "Female">Female</option>
+            <option value = "Other">Other</option>
+            </select>
+        
+            <tr><td>Age:</td><td><input name= "age" type="text" size=10><br>
+                <tr><td>Phone:</td><td><input name= "phone" type="text" size=50>
+	
+	<br><br>
+	<input type="button" value="Submit" onclick= "doSubmit()">
+	<input type="reset" value="Clear Enteries" >
+    <br><br>
+
+    Name: <p id="nama"></p>
+    Address:<p id="alamat"></p>
+    City:<p id="tempat"></p>
+    State:<p id="stute"></p>
+    Gender:<p id="tahun"></p>
+    Program:<p id="lawyat"></p>
+    Age:<p id="umur"></p>
+    Phone:<p id="nombor"></p>
+    Total from calculation = <p id="cal"></p>
+
+</table>
+</form>
+</body>
+
+<script>
+     function doSubmit()
+	 {
+        
+        var name=document.Calculator.student.value;
+        var age=document.Calculator.age.value;
+        var program=document.Calculator.program.value;
+        var address=document.Calculator.address.value;
+        var city=document.Calculator.city.value;
+        var state=document.Calculator.state.value;
+        var phone=document.Calculator.phone.value;
+        var gender=document.Calculator.gender.value;
+       	
+     }
+	 
+	 function validateform()
+	 {
+	    var name=document.Calculator.student.value;
+		var address=document.Calculator.address.value;
+		var city=document.Calculator.city.value;
+		var age=document.Calculator.age.value;
+		var phone=document.Calculator.phone.value;
+		var number2=document.Calculator.number2.value;
+		var number1=document.Calculator.number1.value;
+		if (name==null || name=="")
+		{
+		    alert("put your name dumbo");
+			return false;
+		}
+		else if(address==null || address=="")
+		{
+		    alert("where you live? Blank area meh?");
+			return false;
+		}
+	    else if(city==null || city=="")
+		{
+		    alert("you live in white house is it? put your city ler");
+			return false;
+		}
+		else if(age==null || age=="")
+		{
+		    alert("where your age??? you non exist ah?");
+			return false;
+		}
+		else if(isNaN(age))
+		{
+		   alert("since when age got alphabet meh?");
+		   return false;
+		}
+		else if(phone==null || phone=="")
+		{
+		   alert("you got no phone meh? sad");
+		   return false;
+		}
+		else if(isNaN(phone))
+		{
+		   alert("phone number not alphabet, can't give gf one at least?");
+		   return false;
+		}
+		
+	 }
+</script>	 
+</html>
