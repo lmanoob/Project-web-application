@@ -35,4 +35,4 @@ if(isset($_POST['teacherlogin']))
 }
 ?>
     </body>
-</html
+</html>
