@@ -11,7 +11,7 @@
         <form action="login.php" method="post">
             Student ID: <input type="text" name="id">
             Password: <input type="password" name="password">
-            <button name="login" value="Login">Login</button>
+            <button name="login">Login</button>
             <a href="register.php"><input name="registeration" type="button" value="Register"></a>
         </form>
 <?php
