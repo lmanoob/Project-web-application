@@ -1,10 +1,10 @@
 <?php
 include 'conn.php';
 $teacher_id = $_GET['teacher_id'];
-$update = "UPDATE user SET teacher_firstName='$_POST[firstname]',
+$update = "UPDATE teacher SET teacher_firstName='$_POST[firstname]',
 teacher_lastName='$_POST[lastname]',teacher_email='$POST[email]',
 teacher_password='$_POST[password]',teacher_phoneNum='$_POST[phone]')
-where user_id=$userid";
+where teacher_id=$teacher_id";
 if(!mysqli_query($conn, $update)){ die('Error: '.mysqli_error($conn)); }
 $result = mysqli_query($conn, "select * from teacher where teacher_id=$teacher_id");
 $row = mysqli_fetch_row($result);
