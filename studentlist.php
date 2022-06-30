@@ -9,9 +9,6 @@ while($row = mysqli_fetch_row($result)){
 	echo"<td>$row[2]</td>";
 	echo"<td>$row[3]</td>";
 	echo"<td>$row[4]</td>";
-	echo"<td><a href=update.php?userid=$row[0]>Update</a></td>";
-	echo"&nbsp;&nbsp;&nbsp;";
-	echo"<td><a href=delete.php?userid=$row[0]>Delete</a></td>";
 	echo"</tr>";
 }echo"</table>";
 mysqli_free_result($result);
