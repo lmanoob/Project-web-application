@@ -19,7 +19,6 @@ if(isset($_POST['teacherlogin']))
     else
     {
         echo "<script type'text/javascript'>alert('Invalid Teacher ID or password!')</script>";  
-        header('location:loginpage.php');  
     }
 }
 ?>
