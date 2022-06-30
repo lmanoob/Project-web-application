@@ -1,7 +1,8 @@
 
 	<?php
+	session_start();
 	include 'conn.php';
-	$id= $_POST['id'];
+	$id= $_SESSION['student_id'];
 	$result = mysqli_query($conn, "select class_code from class");
 	$result2 = mysqli_query($conn, "select student_id from student where student_id=$id");
 	$row = mysqli_fetch_row($result2);
