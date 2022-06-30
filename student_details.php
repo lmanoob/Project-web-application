@@ -1,7 +1,7 @@
 <?php
 include 'conn.php';
-$studentid = $_POST['id'];
-$result = mysqli_query($conn, "select * from student where student_id=$studentid");
+$id = $_GET['id'];
+$result = mysqli_query($conn, "select * from student where student_id=$id");
 $row = mysqli_fetch_row($result);
 echo "Student ID: $row[0]<br>";
 echo "First Name: $row[1]<br>";
