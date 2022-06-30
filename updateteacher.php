@@ -4,7 +4,7 @@ $teacher_id = $_GET['teacher_id'];
 $result = mysqli_query($conn, "select * from teacher
 where teacher_id=$teacher_id");
 $row = mysqli_fetch_row($result);
-    echo "<form action=update_process.php?teacher_id=$row[0] method=post>";
+    echo "<form action=update_processteacher.php?teacher_id=$row[0] method=post>";
     echo "Teacher ID: <input type='text' name='id' value='$row[0]' readonly><br>";
     echo "Firstname: <input type='text' name='firstname' value='$row[1]'><br>";
     echo "Lastname: <input type='text' name='lastname' value='$row[2]'><br>";
