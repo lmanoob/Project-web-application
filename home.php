@@ -2,6 +2,10 @@
 <html>
     <head>
         <title>Home</title>
+    <?php
+	include 'conn.php';
+	session_start();
+	?>
     </head>
     <style>
     </style>
