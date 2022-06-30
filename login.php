@@ -19,7 +19,6 @@ if(isset($_POST['login']))
     else
     {
         echo "<script type'text/javascript'>alert('Invalid Student ID or password!')</script>";  
-        header('location:loginpage.php');
     }
 }
 ?>
