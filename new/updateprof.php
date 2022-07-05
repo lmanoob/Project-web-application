@@ -15,7 +15,7 @@ $row = mysqli_fetch_row($result);
     echo "Student ID : $row[0]<br>First name : $row[1]<br>";
     echo "Last name : $row[2]<br>Email : $row[3]<br>";
     echo "Password : $row[4]<br>Student phone number : $row[5]<br>";
-    echo "<ahref=studentlist.php>Back to table</a>";
+    echo "<a href=studentlist.php>Back to table</a>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
