@@ -12,7 +12,7 @@
 	echo "<label for=cars>Pick A Class:</label><br>";
 	echo "<select>";
 	foreach( $result as $row2 ){
-	echo "<option value=class_code>" . $row2['class_code'] . "</option>";}
+	echo "<option value='class_code'>" . $row2['class_code'] . "</option>";}
 
 	echo "</select><br>";
 	echo "<input type=submit value=Register>";
