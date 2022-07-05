@@ -1,8 +1,9 @@
 <?php
-	include 'conn.php';
-	session_start();
-    $id = $_SESSION['student_id'];
+include 'conn.php';
+session_start();
+$id = $_SESSION['student_id'];
 ?>
+
 <!Doctype html>
 <html lang="en">
   <head>
