@@ -8,11 +8,13 @@ while($row = mysqli_fetch_row($result)){
 	echo"<td>$row[1]</a></td>";
 	echo"<td>$row[2]</td>";
 	echo"<td>$row[3]</td>";
-	echo"<td><a href=update.php?userid=$row[0]>Update</a></td>";
+	echo"<td><a href=updatesubject.php?subject_code=$row[0]>Update</a></td>";
 	echo"&nbsp;&nbsp;&nbsp;";
-	echo"<td><a href=delete.php?userid=$row[0]>Delete</a></td>";
+	echo"<td><a href=deletesubject.php?subject_code=$row[0]>Delete</a></td>";
 	echo"</tr>";
 }echo"</table>";
+echo "<a href=home_teacher.php>Home</a>";
+echo "<button type=button><a href=add_subject.php>New Subject</a></button>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
