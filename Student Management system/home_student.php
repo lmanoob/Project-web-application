@@ -31,6 +31,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="home_student.php">Home</a>
+            <a class="nav-link" href="studentprofile.php">Profile</a>
+            <a class="nav-link" href="register_class.php">Class Registration</a>
+            <a class="nav-link" href="viewownclass.php">Registered Class</a>
+            <a class="nav-link" href="viewownsubject.php">Registered Subject</a>
             <a class="nav-link" href="loginpage.php">Log out</a>
           </div>
         </div>
