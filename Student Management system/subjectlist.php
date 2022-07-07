@@ -9,7 +9,7 @@
       body{
         background-image: url("Image/background.jpg");
         background-color: aquamarine;
-        height:400px;
+        height:100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
