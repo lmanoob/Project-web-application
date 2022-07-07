@@ -7,5 +7,7 @@ if(!mysqli_query($conn, $sql))
 {
     die('Error: '.mysqli_error($conn));
 }
-echo "Successfully registered <br>";
+else{
+     header('location:subjectlist.php');
+}
 ?>
