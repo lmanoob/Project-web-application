@@ -9,18 +9,21 @@
       body{
         background-image: url("Image/background.jpg");
         background-color: aquamarine;
-        height:400px;
+        height:100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
+	  #tengah{
+		  position:relative;
+		  left:45%;
+	  }
     </style>
   </head>
   <body>
 <?php
 include 'conn.php';
 include "./header_teach.html";
-echo "<br>";
 $result = mysqli_query($conn, "select * from student");
 echo "<div class=container>";
 echo "<div class=row>";
@@ -37,6 +40,7 @@ while($row = mysqli_fetch_row($result)){
 echo "</table>";
 echo "</div>";
 echo "</div>";
+echo "<button id=tengah type=button class='btn btn-dark'><a class=link-light href=register.php>Add a Student</a></button>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
