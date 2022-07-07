@@ -3,40 +3,70 @@
 	session_start();
 	$id = $_SESSION['teacher_id'];
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
     <style>
-        body{
-            text-align:center;
-            background: rgb(2,0,36);
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,9,121,1) 100%, rgba(0,212,255,1) 100%);
-        }
-        h1{
-            color:white;
-            font-family: sans-serif;
-        }
-        a:link, a:visited {
-        background-color: #f44336;
-        color: white;
-        padding: 14px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        }
-
-        a:hover, a:active {
-        background-color: red;
-        }
+      body{
+        background-image: url("Image/background.jpg");
+        background-color: aquamarine;
+        height:400px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     </style>
-    <body>
-        <H1>Student Management System</H1>
-		<a href=teacherprofile.php>View Profile</a>
-        <a href=teach_class.php>My Classes</a>
-        <a href=teach_subject.php>My subjects</a>
-        <a href=subjectlist.php>Subject List</a>
-		<a href=studentlist.php>Student List</a>
-    </body>
+  </head>
+  <body>
+  <?php include "./header_teach.html" ?>
+  <div class="row justify-content-around mx-auto pt-5">
+        <div class="col-lg-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Profile</h5>
+              <a href="teacherprofile.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Class Teached</h5>
+              <a href="teach_class.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-around mx-auto pt-5">
+        <div class="col-sm-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Subject Teached</h5>
+              <a href="teach_subject.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Subject List</h5>
+              <a href="subjectlist.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Student List</h5>
+              <a href="studentlist.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
