@@ -1,15 +1,65 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+    <style>
+      body{
+        background-image: url("Image/background.jpg");
+        background-color: aquamarine;
+        height:100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+       #kotak-tengah{
+         border-radius: 50px;
+         background-color: white;
+         width: 30%;
+         margin:auto; /* Center the div */
+         position:relative;
+         padding: 20px;
+        }
+    </style>
+  </head>
+<body>
 <?php
 include 'conn.php';
 $subject_code = $_GET['subject_code'];
+include "./header_teach.html";
 $result = mysqli_query($conn, "select * from subject
 where subject_code='$subject_code'");
 $row = mysqli_fetch_row($result);
+    echo "<div id='kotak-tengah'>";
     echo "<form action=update_processsubject.php?subject_id=$row[0] method=post>";
-    echo "Subject Code: <input type=text name=SuCode value='$row[0]'><br>";
-    echo "Subject Name: <input type=text name=SuName value='$row[1]'><br>";
-    echo "Subject Description: <textarea name=SuDescript>$row[2]</textarea><br>";
-    echo "Subject Credit: <input type=text name=credit value='$row[3]'><br>";
-echo "<input type=submit value=Update>";
+    
+    echo "<div class=mb-3>";
+    echo "<label for='SuCode' class=form-label>Subject Code:</label>"; 
+    echo "<input type='text' class=form-control name='SuCode' value='$row[0]'>";
+    echo "</div>";
+    
+    echo "<div class=mb-3>";
+    echo "<label for='SuName' class=form-label>Subject Name:</label>"; 
+    echo "<input type='text' class=form-control name='SuName' value='$row[1]'>";
+    echo "</div>";
+    
+    echo "<div class='form-floating'>";
+    echo "<textarea class='form-control' name='SuDescript' placeholder='Put Description here' id='floatingTextarea'  value='$row[2]'></textarea>";
+    echo "<label for='floatingTextarea'>Subject Description:</label>";
+    echo "</div>";
+
+    echo "<div class=mb-3>";
+    echo "<label for='credit' class=form-label>Subject Credit:</label>"; 
+    echo "<input type='text' class=form-control name='credit' value='$row[3]'>";
+    echo "</div>";
+    
+    echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
+	echo "</div>";
+    echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
+    echo "</body>";
+    echo "</html>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
