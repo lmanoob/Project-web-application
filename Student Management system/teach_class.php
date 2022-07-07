@@ -20,7 +20,7 @@
 <?php
 	session_start();
 	include 'conn.php';
-	
+	<?php include "./header_teach.html" ?>
 	$id= $_SESSION['teacher_id'];
     $result = mysqli_query($conn, "SELECT * from class where teacher_id='$id'");
     echo "<div class=container>";
