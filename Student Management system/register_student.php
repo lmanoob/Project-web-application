@@ -26,7 +26,7 @@
     <body>
         <?php include "./header_teach.html"; ?>
         <div id="kotak-tengah">
-        <form action="add.php" method = "post">
+        <form action="add_studentprocess.php" method = "post">
         <div class="mb-3">
         <label for="id" class="form-label">Student ID:</label>
         <input type="text" class="form-control" name="id">
