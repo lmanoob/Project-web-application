@@ -83,7 +83,7 @@
                 <input class="input" type="password" placeholder="Enter Password" name="password">
                 <br>
                 <button class="button" name="teacherlogin">Login</button>
-                <a href="register teacher.php"><input name="registeration" class="button" type="button" value="Register"></a>
+                <a href="register_teacher.php"><input name="registeration" class="button" type="button" value="Register"></a>
             </form>
         </div>
 
