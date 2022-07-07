@@ -63,7 +63,7 @@
     echo "<input type='text' class='form-control' name='phone' value='$row[5]'>";
     echo "</div>";
 
-    echo "<input type=submit lass=btn btn-primary value=Update></form>";
+    echo "<input type=submit class=btn btn-primary value=Update></form>";
     echo "</div>";
     echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
