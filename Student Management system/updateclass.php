@@ -70,7 +70,7 @@ $row2 = mysqli_fetch_row($result2);
 			$teacher_id=$row2['teacher_id'];
 			echo "<option value=".$teacher_id.">" . $teacher_id . "</option>";}
 	echo "</select></div><br>";
-    echo "<input type='submit' class='btn btn-primary' value=Register></form>";
+    echo "<input type='submit' class='btn btn-primary' value=Update></form>";
 	echo "</div>";
 	echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
