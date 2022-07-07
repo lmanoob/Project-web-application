@@ -28,7 +28,6 @@
     $row = mysqli_fetch_row($result);
     echo "<div class=container>";
     echo "<div class=row>";
-    echo "<div class= col align-self-center>";
     echo "<table class=table>";
     echo "<tr class=bg-info><th>Student ID</th><th scope=col>$row[0]</th></tr>";
     echo "<tr class=bg-info><th>First Name</th><th scope=col>$row[1]</th></tr>";
@@ -38,7 +37,6 @@
     echo "<tr class=bg-info><th>Phone Number</th><th scope=col>$row[5]</th></tr>";
     echo "</table>";
     echo "<a class='btn btn-primary' href=updateprofile.php?student_id=$row[0]>Update</a>";
-    echo "</div>";
     echo "</div>";
     echo "</div>";
     mysqli_free_result($result);
