@@ -24,7 +24,7 @@
 	$id= $_SESSION['student_id'];
     include "./header.html";
     echo "<br>";
-    $result = mysqli_query($conn, "SELECT * from student where student_id='2020461282'");
+    $result = mysqli_query($conn, "SELECT * from student where student_id='$id'");
     $row = mysqli_fetch_row($result);
     echo "<div class=container>";
     echo "<div class=row>";
