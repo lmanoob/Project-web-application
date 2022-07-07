@@ -1,6 +1,7 @@
 <?php
     $con = mysqli_connect("localhost", "root", "") or die ("Unable to connect");
     mysqli_select_db($con, "studentmanagementsystem");
+    session_start();
 ?>
 <?php
 if(isset($_POST['teacherlogin']))
