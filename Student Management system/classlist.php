@@ -19,7 +19,7 @@
   <body>
 <?php
 include 'conn.php';
-include "./header.html";
+include "./header_teach.html";
 echo "<br>";
 $result = mysqli_query($conn, "select * from class");
 echo "<div class=container>";
@@ -42,5 +42,6 @@ echo "</div>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
