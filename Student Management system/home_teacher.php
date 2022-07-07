@@ -24,7 +24,7 @@
   <body>
   <?php include "./header_teach.html" ?>
   <div class="row justify-content-around mx-auto pt-5">
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <div class="card text-white bg-info mb-3 text-center">
             <div class="card-body">
               <h5 class="card-title">Profile</h5>
@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <div class="card text-white bg-info mb-3 text-center">
             <div class="card-body">
               <h5 class="card-title">Class Teached</h5>
@@ -40,8 +40,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-around mx-auto pt-5">
         <div class="col-sm-4">
           <div class="card text-white bg-info mb-3 text-center">
             <div class="card-body">
@@ -50,6 +48,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-around mx-auto pt-5">
         <div class="col-sm-4">
           <div class="card text-white bg-info mb-3 text-center">
             <div class="card-body">
@@ -63,6 +63,14 @@
             <div class="card-body">
               <h5 class="card-title">Student List</h5>
               <a href="studentlist.php" class="btn btn-dark">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-info mb-3 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Student List</h5>
+              <a href="classlist.php" class="btn btn-dark">View</a>
             </div>
           </div>
         </div>
