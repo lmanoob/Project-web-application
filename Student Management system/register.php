@@ -19,12 +19,12 @@
          width: 30%;
          margin:auto; /* Center the div */
          position:relative;
-         padding: 50px;
-		 top: 10%;
+         padding: 10px;
         }
     </style>
   </head>
     <body>
+        <?php include "./header_teach.html"; ?>
         <div id="kotak-tengah">
         <form action="add.php" method = "post">
         <div class="mb-3">
