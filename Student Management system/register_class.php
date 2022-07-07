@@ -38,23 +38,22 @@
 	$row2 = mysqli_fetch_row($result);
 	
 	echo "<div id='kotak-tengah'>";
-    echo "<form action=registerclass.php?method=post>";
-    
-    echo "<div class=mb-3>";
-    echo "<label for='id' class=form-label>Student ID</label>"; 
-    echo "<input type='text' class=form-control name='id' value='$row[0]' disabled>";
+    echo "<form action='registerclass.php' method='post'>";
+	
+    echo "<div class='mb-3'>";
+    echo "<label for='id' class='form-label'>Student ID:</label>"; 
+    echo "<input type='text' class='form-control' name='id' value='$row[0]' readonly>";
     echo "</div>";
 	
 	echo "<div class=mb-3>";
 	echo "<label for='class_code'>Pick A Class:</label><br>";
-	echo "<select class='form-select aria-label='Default select example' 'name='class_code'>";
-	echo "<option selected>Class</option>";
+	echo "<select class='form-select' aria-label='Default select example' name='class_code'>";
+	echo "<option selected>Pick A Class</option>";
 	foreach( $result as $row2 ){
 	$class_code=$row2['class_code'];
 	echo "<option value=".$class_code.">" . $row2['class_code'] . "</option>";}
-	echo "</select><br>";
-	echo "</div>";
-    echo "<input type=submit class=btn btn-primary value=Update></form>";
+	echo "</select></div><br>";
+    echo "<input type='submit' class='btn btn-primary' value=Register></form>";
 	echo "</div>";
 	echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
