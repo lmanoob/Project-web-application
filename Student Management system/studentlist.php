@@ -1,21 +1,45 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+    <style>
+      body{
+        background-image: url("Image/background.jpg");
+        background-color: aquamarine;
+        height:400px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
 <?php
 include 'conn.php';
-echo "<table border ='1'><tr><th>Student ID</th><th>First name</th>";
-echo "<th>Last name</th><th>Email</th><th>Phone Number</th><th>Action</th></tr>";
+include "./header_teach.html";
+echo "<br>";
 $result = mysqli_query($conn, "select * from student");
+echo "<div class=container>";
+echo "<div class=row>";
+echo "<table class=table>";
 while($row = mysqli_fetch_row($result)){
-	echo"<tr><td><a href=studentdb.php?id=$row[0]>$row[0]</td>";
-	echo"<td>$row[1]</a></td>";
-	echo"<td>$row[2]</td>";
-	echo"<td>$row[3]</td>";
-	echo"<td>$row[5]</td>";
-	echo"<td><a href=updatestudent.php?id=$row[0]>Update</a></td>";
-	echo"&nbsp;&nbsp;&nbsp;";
-	echo"<td><a href=deletestudent.php?id=$row[0]>Delete</a></td>";
-	echo"</tr>";
-}echo"</table>";
-echo "<a href=home_teacher.php>Home</a>";
-echo "<button type=button><a href=register_student.php>New Student</a></button>";
+	echo "<tr class=bg-info><th>Student ID</th><th scope=col>$row[0]</th></tr>";
+    echo "<tr class=bg-info><th>First Name</th><th scope=col>$row[1]</th></tr>";
+    echo "<tr class=bg-info><th>Last Name</th><th scope=col>$row[2]</th></tr>";
+    echo "<tr class=bg-info><th>Email</th><th scope=col>$row[3]</th></tr>";
+    echo "<tr class=bg-info><th>Password</th><th scope=col>$row[4]</th></tr>";
+    echo "<tr class=bg-info><th>Phone Number</th><th scope=col>$row[5]</th></tr>";
+	echo "<tr class=bg-secondary><th>Action </th><th scope=col><a class=link-info href=updatestudent.php?class_code=$row[0]> Update </a><a class=link-info href=deletestudent.php?class_code=$row[0]> Delete </a></th></tr>";
+}
+echo "</table>";
+echo "</div>";
+echo "</div>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
