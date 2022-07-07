@@ -32,7 +32,7 @@ while($row = mysqli_fetch_row($result)){
     echo "<tr class=bg-info><th>Email</th><th scope=col>$row[3]</th></tr>";
     echo "<tr class=bg-info><th>Password</th><th scope=col>$row[4]</th></tr>";
     echo "<tr class=bg-info><th>Phone Number</th><th scope=col>$row[5]</th></tr>";
-	echo "<tr class=bg-secondary><th>Action </th><th scope=col><a class=link-info href=updatestudent.php?class_code=$row[0]> Update </a><a class=link-info href=deletestudent.php?class_code=$row[0]> Delete </a></th></tr>";
+	echo "<tr class=bg-secondary><th>Action </th><th scope=col><a class=link-info href=updatestudent.php?student_id=$row[0]> Update </a><a class=link-info href=deletestudent.php?student_id=$row[0]> Delete </a></th></tr>";
 }
 echo "</table>";
 echo "</div>";
