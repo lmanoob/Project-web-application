@@ -55,7 +55,7 @@
     echo "</div>";
 	
 	echo "<div class=mb-3>";
-	echo "<label for='subject_code'>Pick A Class:</label><br>";
+	echo "<label for='subject_code'>Pick the subject code:</label><br>";
 	echo "<select class='form-select' aria-label='Default select example' name='subject_code'>";
 	echo "<option selected>Pick the Subject Code</option>";
 	foreach( $result1 as $row1){
@@ -64,7 +64,7 @@
 	echo "</select><br>";
 	
 	echo "<div class=mb-3>";
-	echo "<label for='teacher_id'>Pick A Class:</label><br>";
+	echo "<label for='teacher_id'>Assign a teacher:</label><br>";
 	echo "<select class='form-select' aria-label='Default select example' name='teacher_id'>";
 	echo "<option selected>Pick the Teacher ID</option>";
 	foreach( $result2 as $row2 ){
