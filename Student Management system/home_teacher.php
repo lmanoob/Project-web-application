@@ -69,7 +69,7 @@
         <div class="col-sm-4">
           <div class="card text-white bg-info mb-3 text-center">
             <div class="card-body">
-              <h5 class="card-title">Student List</h5>
+              <h5 class="card-title">Class List</h5>
               <a href="classlist.php" class="btn btn-dark">View</a>
             </div>
           </div>
