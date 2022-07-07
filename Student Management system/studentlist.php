@@ -40,7 +40,7 @@ while($row = mysqli_fetch_row($result)){
 echo "</table>";
 echo "</div>";
 echo "</div>";
-echo "<button id=tengah type=button class='btn btn-dark'><a class=link-light href=register.php>Add a Student</a></button>";
+echo "<button id=tengah type=button class='btn btn-dark'><a class=link-light href=register_student.php>Add a Student</a></button>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
