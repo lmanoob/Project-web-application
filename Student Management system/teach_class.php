@@ -21,7 +21,7 @@
 	session_start();
 	include 'conn.php';
 	include "./header_teach.html";
-	echo "<br>;
+	echo "<br>";
 	$id= $_SESSION['teacher_id'];
     $result = mysqli_query($conn, "SELECT * from class where teacher_id='$id'");
     echo "<div class=container>";
