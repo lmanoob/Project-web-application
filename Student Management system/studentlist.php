@@ -28,14 +28,10 @@ $result = mysqli_query($conn, "select * from student");
 echo "<div class=container>";
 echo "<div class=row>";
 echo "<table class=table>";
+echo "<tr class=bg-info><th>Student ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Phone Number</th><th>Action </th></tr>";
 while($row = mysqli_fetch_row($result)){
-	echo "<tr class=bg-info><th>Student ID</th><th scope=col>$row[0]</th></tr>";
-    echo "<tr class=bg-info><th>First Name</th><th scope=col>$row[1]</th></tr>";
-    echo "<tr class=bg-info><th>Last Name</th><th scope=col>$row[2]</th></tr>";
-    echo "<tr class=bg-info><th>Email</th><th scope=col>$row[3]</th></tr>";
-    echo "<tr class=bg-info><th>Password</th><th scope=col>$row[4]</th></tr>";
-    echo "<tr class=bg-info><th>Phone Number</th><th scope=col>$row[5]</th></tr>";
-	echo "<tr class=bg-secondary><th>Action </th><th scope=col><a class=link-info href=updatestudent.php?student_id=$row[0]> Update </a><a class=link-info href=deletestudent.php?student_id=$row[0]> Delete </a></th></tr>";
+    echo "<tr class=bg-info><th scope=col>$row[0]</th><th scope=col>$row[1]</th><th scope=col>$row[2]</th>><th scope=col>$row[3]</th><th scope=col>$row[4]</th><th scope=col>$row[5]</th>";
+	echo "<th class=bg-secondary scope=col><a class=link-info href=updatestudent.php?student_id=$row[0]> Update </a><a class=link-info href=deletestudent.php?student_id=$row[0]> Delete </a></th></tr>";
 }
 echo "</table>";
 echo "</div>";
