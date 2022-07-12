@@ -27,13 +27,12 @@
     echo "<div class=container>";
     echo "<div class=row>";
     echo "<table class=table>";
-	while($row = mysqli_fetch_row($result)){
-		echo "<tr class=bg-primary><th>Subject Code</th><th scope=col>$row[0]</th></tr>";
-        echo "<tr class=bg-info><th>Subject Name</th><th scope=col>$row[1]</th></tr>";
-        echo "<tr class=bg-info><th>Subject Description</th><th scope=col>$row[2]</th></tr>";
-        echo "<tr class=bg-info><th>Subject Credit</th><th scope=col>$row[3]</th></tr>";
-        echo "<tr class=bg-secondary><th>Action </th><th scope=col><a class=link-info href=updatesubject.php?subject_code=$row[0]> Update </a><a class=link-info href=delete.php?subject_code=$row[0]> Delete </a></th></tr>";
-	}
+	echo "<tr class=bg-info><th>Subject Code</th><th>Subject Name</th><th>Subject Description</th><th>Subject Credit</th><th>Action </th></tr>";
+while($row = mysqli_fetch_row($result)){
+    echo "<tr class=bg-info><th scope=col>$row[0]</th><th scope=col>$row[1]</th><th scope=col>$row[2]</th><th scope=col>$row[3]</th>";
+	echo "<th class=bg-secondary scope=col><a class=link-info href=updatesubject.php?subject_code=$row[0]> Update </a><a class=link-info href=deletesubject.php?subject_code=$row[0]> Delete </a></th></tr>";
+
+}
     echo "</table>";
     echo "</div>";
     echo "</div>";
