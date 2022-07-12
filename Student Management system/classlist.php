@@ -27,7 +27,7 @@ echo "<div class=row>";
 echo "<table class=table>";
     echo "<tr class=bg-info><th>Class Code</th><th>Class Name</th><th>Number of Student</th><th>Subject Code</th><th>Teacher ID</th><th>Action </th></tr>";
 while($row = mysqli_fetch_row($result)){
-    echo "<tr class=bg-info><th scope=col>$row[0]</th><th scope=col>$row[1]</th><th scope=col>$row[2]</th>><th scope=col >$row[3]</th><th scope=col>$row[4]</th>";
+    echo "<tr class=bg-info><th scope=col>$row[0]</th><th scope=col>$row[1]</th><th scope=col>$row[2]</th><th scope=col >$row[3]</th><th scope=col>$row[4]</th>";
 	echo "<th class=bg-secondary scope=col><a class=link-info href=updateclass.php?class_code=$row[0]> Update </a><a class=link-info href=deleteclass.php?class_code=$row[0]> Delete </a></th></tr>";
 }
 echo "</table>";
