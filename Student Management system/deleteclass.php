@@ -5,7 +5,9 @@ $delete =  "delete from class where class_code='$class_code'";
 if (!mysqli_query($conn, $delete)){
     die ( 'Error: '. mysqli_error($conn));
 }
+else{
     echo "Sucessfully deleted<br>";
-    echo "<a href=classlist.php>Back to table</a>";
+    header('location:classlist.php');
 mysqli_close($conn);
+}
 ?>
