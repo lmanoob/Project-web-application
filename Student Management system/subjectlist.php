@@ -21,7 +21,7 @@
 include 'conn.php';
 include "./header_teach.html";
 echo "<br>";
-$result = mysqli_query($conn, "select * from subject");
+$result = mysqli_query($conn, "select * from subject"); //fetch data from subject database
 echo "<div class=container>";
 echo "<div class=row>";
 echo "<table class=table>";
@@ -35,7 +35,7 @@ echo "</table>";
 echo "</div>";
 echo "</div>";
 echo "<div class='col-md-12 text-center'>";
-echo "<button type=button class='btn btn-dark'><a class=link-light href=add_subject.php>Add a subject</a></button>";
+echo "<button type=button class='btn btn-dark'><a class=link-light href=add_subject.php>Add a subject</a></button>"; //option to add a subject
 echo "</div>";
 mysqli_free_result($result);
 mysqli_close($conn);
