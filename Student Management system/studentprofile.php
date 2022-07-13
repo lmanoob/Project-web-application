@@ -19,12 +19,12 @@
   <body>
 <?php
 	session_start();
-	include 'conn.php';
+	include 'conn.php'; // call conn
 
-	$id= $_SESSION['student_id'];
+	$id= $_SESSION['student_id']; //id from the table
     include "./header.html";
     echo "<br>";
-    $result = mysqli_query($conn, "SELECT * from student where student_id='$id'");
+    $result = mysqli_query($conn, "SELECT * from student where student_id='$id'"); //sql order to fetch data from database
     $row = mysqli_fetch_row($result);
     echo "<div class=container>";
     echo "<div class=row>";
@@ -36,7 +36,7 @@
     echo "<tr class=bg-info><th>Password</th><th scope=col>$row[4]</th></tr>";
     echo "<tr class=bg-info><th>Phone Number</th><th scope=col>$row[5]</th></tr>";
     echo "</table>";
-    echo "<a class='btn btn-primary' href=updateprofile.php?student_id=$row[0]>Update</a>";
+    echo "<a class='btn btn-primary' href=updateprofile.php?student_id=$row[0]>Update</a>"; //option to update profile
     echo "</div>";
     echo "</div>";
     mysqli_free_result($result);
