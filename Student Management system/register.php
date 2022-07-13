@@ -76,7 +76,7 @@
          <form name="register"action="add.php" method = "post" onsubmit="return validateform()">
         <div class="mb-3">
         <label for="id" class="form-label">Student ID:</label>
-        <input type="text" class="form-control" name="id">
+        <input type="number" class="form-control" name="id">
         </div>
         <div class="mb-3">
         <label for="firstname" class="form-label">First Name:</label>
@@ -96,10 +96,11 @@
         </div>  
         <div class="mb-3">
         <label for="phone" class="form-label">Phone Number:</label>
-        <input type="text" class="form-control" name="phone">
+        <input type="number" class="form-control" name="phone">
         </div>   
         <input type="submit" class="btn btn-primary" value="Register"> // submit the registration into the database
         </form>
+	<button type="button"  class="btn btn-dark"><a href="loginpage.php">Back</a></button>
     </div>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
     </body>
