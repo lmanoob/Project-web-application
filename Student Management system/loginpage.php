@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> //css for the header
     <style>
         body {
             font-family: Arial;
@@ -65,14 +65,14 @@
         <body>
 
         <h2>Student Management System</h2>
-        <h3>Login</h3>
+        <h3>Login</h3> 
 
         <div class="tab">
-            <button class="tablinks" onclick="loginfor(event, 'teacher')">Teacher</button>
-            <button class="tablinks" onclick="loginfor(event, 'student')">Student</button>
+            <button class="tablinks" onclick="loginfor(event, 'teacher')">Teacher</button> // teacher login selection
+            <button class="tablinks" onclick="loginfor(event, 'student')">Student</button> // student login selection
         </div>
 
-        <div id="teacher" class="tabcontent">
+        <div id="teacher" class="tabcontent">      //if pick teacher
             <form action="teacherlogin.php" method="post">
                 <label for="id">Teacher ID</label>
                 <br>
@@ -87,7 +87,7 @@
             </form>
         </div>
 
-        <div id="student" class="tabcontent">
+        <div id="student" class="tabcontent"> // if pick student
             <form action="login.php" method="post">
                 <label for="id">Student ID</label>
                 <br>
@@ -103,7 +103,7 @@
         </div>
 
         <script>
-        function loginfor(evt, login) {
+        function loginfor(evt, login) { // for login function
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
