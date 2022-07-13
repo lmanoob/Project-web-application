@@ -23,6 +23,36 @@
          padding: 20px;
         }
     </style>
+ <script>
+     function validateform()
+{
+	var SuCode= document.register.SuCode.value;
+	var SuName= document.register.SuName.value;
+	var SuDescript= document.register.SuDescript.value;
+	var credit= document.register.credit.value;
+	
+	if(SuCode=null||SuCode=="")
+	{
+		alert("Subject Code can't be blank");
+		return false;
+	}
+	else if(SuName=null||SuName=="")
+	{
+		alert("Subject Name can't be blank");
+		return false;
+	}
+	else if(SuDescript=null||SuDescript=="")
+	{
+		alert("Subject Description can't be blank");
+		return false;
+	}
+	else if(credit=null||credit=="")
+	{
+		alert("Subject Credit can't be blank");
+		return false;
+	}
+}
+    </script>
   </head>
 <body>
 <?php
@@ -35,7 +65,7 @@ where subject_code='$subject_code'");
 //display the output
 $row = mysqli_fetch_row($result);
     echo "<div id='kotak-tengah'>";
-    echo "<form action=update_processsubject.php?subject_id=$row[0] method=post>";
+     echo "<form name='register' onsubmit='return validateform()' action=update_processsubject.php?subject_id=$row[0] method=post>";
     
     echo "<div class=mb-3>";
     echo "<label for='SuCode' class=form-label>Subject Code:</label>"; 
@@ -54,7 +84,7 @@ $row = mysqli_fetch_row($result);
 
     echo "<div class=mb-3>";
     echo "<label for='credit' class=form-label>Subject Credit:</label>"; 
-    echo "<input type='text' class=form-control name='credit' value='$row[3]'>";
+    echo "<input type='number' class=form-control name='credit' value='$row[3]'>";
     echo "</div>";
     
     echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
