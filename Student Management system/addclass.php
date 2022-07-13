@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link to bootsrap to use the css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Home</title>
     <style>
@@ -11,9 +12,10 @@
         background-color: aquamarine;
         height:100%;
         background-position: center;
-        background-size: cover;
+        background-size: cover;/*Background image will cover the whole page*/
         background-repeat: no-repeat;
       }
+	/* Css to put the content into the middle */
        #kotak-tengah{
          border-radius: 50px;
          background-color: white;
@@ -28,10 +30,10 @@
 <?php
 	session_start();
 	include 'conn.php';
-	include "./header_teach.html";
+	include "./header_teach.html";//header for navbar
 	
 	$result=mysqli_query($conn, "SELECT * FROM class");
-	$result1 = mysqli_query($conn, "SELECT subject_code FROM subject");
+	$result1 = mysqli_query($conn, "SELECT subject_code FROM subject"); 
 	$result2 = mysqli_query($conn, "SELECT teacher_id FROM teacher");
 	$row = mysqli_fetch_row($result);
 	$row1 = mysqli_fetch_row($result1);
@@ -58,6 +60,7 @@
 	echo "<label for='subject_code'>Pick the subject code:</label><br>";
 	echo "<select class='form-select' aria-label='Default select example' name='subject_code'>";
 	echo "<option selected>Pick the Subject Code</option>";
+	//Make a sql data as a drop down option in this case the subject_code from table subject
 	foreach( $result1 as $row1){
 			$subject_code=$row1['subject_code'];
 			echo "<option value=".$subject_code.">" . $subject_code. "</option>";}
@@ -67,6 +70,7 @@
 	echo "<label for='teacher_id'>Assign a teacher:</label><br>";
 	echo "<select class='form-select' aria-label='Default select example' name='teacher_id'>";
 	echo "<option selected>Pick the Teacher ID</option>";
+	//Make a sql data as a drop down option in this case the teacher_id from table teacher
 	foreach( $result2 as $row2 ){
 			$teacher_id=$row2['teacher_id'];
 			echo "<option value=".$teacher_id.">" . $teacher_id . "</option>";}
