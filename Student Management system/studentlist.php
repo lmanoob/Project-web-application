@@ -22,9 +22,9 @@
   </head>
   <body>
 <?php
-include 'conn.php';
-include "./header_teach.html";
-$result = mysqli_query($conn, "select * from student");
+include 'conn.php'; //call conn
+include "./header_teach.html"; //call header
+$result = mysqli_query($conn, "select * from student"); //sql query  for putting the data in the form
 echo "<div class=container>";
 echo "<div class=row>";
 echo "<table class=table>";
