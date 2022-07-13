@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	//link to bootsrap to use the css
+	<!--link to bootsrap to use the css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Home</title>
     <style>
@@ -56,7 +56,7 @@ include "./header_teach.html"; //header for navbar
 			
            <input type='submit' class='btn btn-primary' value='UPDATE'>
         </form>
-		//link to implement javascript bootsrtap
+		<!--link to implement javascript bootsrtap-->
 		<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
         </table>
 		</div>
