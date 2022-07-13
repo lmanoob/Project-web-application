@@ -56,6 +56,7 @@ include "./header_teach.html"; //header for navbar
 			
            <input type='submit' class='btn btn-primary' value='UPDATE'>
         </form>
+		//link to implement javascript bootsrtap
 		<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
         </table>
 		</div>
