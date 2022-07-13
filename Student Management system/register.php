@@ -22,11 +22,58 @@
          padding: 10px;
         }
     </style>
+     <script>
+    function validateform()
+{
+	var id= document.register.id.value;
+	var firstname= document.register.firstname.value;
+	var lastname= document.register.lastname.value;
+	var email= document.register.email.value;
+	var password= document.register.password.value;
+	var phone= document.register.phone.value;
+	
+	if(id=null||id=="")
+	{
+		alert("Student Id can't be blank");
+		return false;
+	}
+	else if(firstname=null||firstname=="")
+	{
+		alert("First Name can't be blank");
+		return false;
+	}
+	else if(lastname=null||lastname=="")
+	{
+		alert("Last Name can't be blank");
+		return false;
+	}
+	else if(email=null||email=="")
+	{
+		alert("Email can't be blank");
+		return false;
+	}
+    else if(password=null||password=="")
+	{
+		alert("Password can't be blank");
+		return false;
+	}
+	else if(isNaN(zip))
+	{
+		alert("Zip must be a number");
+		return false;
+	}
+     else if(phone=null||phone=="")
+	{
+		alert("Phone Number can't be blank");
+		return false;
+	}
+}
+    </script>
   </head>
     <body>                                         //the body of the page
         <?php include "./header_teach.html"; ?>
         <div id="kotak-tengah">
-        <form action="add.php" method = "post">
+         <form name="register"action="add.php" method = "post" onsubmit="return validateform()">
         <div class="mb-3">
         <label for="id" class="form-label">Student ID:</label>
         <input type="text" class="form-control" name="id">
