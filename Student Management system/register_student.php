@@ -22,14 +22,56 @@
          padding: 10px;
         }
     </style>
+    <script>
+    function validateform()
+{
+	var id= document.register.id.value;
+	var firstname= document.register.firstname.value;
+	var lastname= document.register.lastname.value;
+	var email= document.register.email.value;
+	var password= document.register.password.value;
+	var phone= document.register.phone.value;
+	
+	if(id=null||id=="")
+	{
+		alert("Student Id can't be blank");
+		return false;
+	}
+	else if(firstname=null||firstname=="")
+	{
+		alert("First Name can't be blank");
+		return false;
+	}
+	else if(lastname=null||lastname=="")
+	{
+		alert("Last Name can't be blank");
+		return false;
+	}
+	else if(email=null||email=="")
+	{
+		alert("Email can't be blank");
+		return false;
+	}
+    else if(password=null||password=="")
+	{
+		alert("Password can't be blank");
+		return false;
+	}
+     else if(phone=null||phone=="")
+	{
+		alert("Phone Number can't be blank");
+		return false;
+	}
+}
+    </script>
   </head>
     <body>
         <?php include "./header_teach.html"; ?> //headercss
         <div id="kotak-tengah">
-        <form action="add_studentprocess.php" method = "post"> //addstudent process call
+        <form name="register" onsubmit="return validateform()" action="add_studentprocess.php" method = "post" >//addstudent process call
         <div class="mb-3">
         <label for="id" class="form-label">Student ID:</label>
-        <input type="text" class="form-control" name="id">
+        <input type="number" class="form-control" name="id">
         </div>
         <div class="mb-3">
         <label for="firstname" class="form-label">First Name:</label>
@@ -49,7 +91,7 @@
         </div>  
         <div class="mb-3">
         <label for="phone" class="form-label">Phone Number:</label>
-        <input type="text" class="form-control" name="phone">
+        <input type="number" class="form-control" name="phone">
         </div>   
         <input type="submit" class="btn btn-primary" value="Register"> //submit registration
         </form>
