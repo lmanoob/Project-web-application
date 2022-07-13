@@ -23,10 +23,51 @@
 		 top: 10%;
         }
     </style>
+	 <script>
+     function validateform()
+{
+	var id= document.register.id.value;
+	var firstname= document.register.firstname.value;
+	var lastname= document.register.lastname.value;
+	var email= document.register.email.value;
+	var password= document.register.password.value;
+	var phone= document.register.phone.value;
+	
+	if(id=null||id=="")
+	{
+		alert("Teacher Id can't be blank");
+		return false;
+	}
+	else if(firstname=null||firstname=="")
+	{
+		alert("First Name can't be blank");
+		return false;
+	}
+	else if(lastname=null||lastname=="")
+	{
+		alert("Last Name can't be blank");
+		return false;
+	}
+	else if(email=null||email=="")
+	{
+		alert("Email can't be blank");
+		return false;
+	}
+    else if(password=null||password=="")
+	{
+		alert("Password can't be blank");
+		return false;
+	}
+     else if(phone=null||phone=="")
+	{
+		alert("Phone Number can't be blank");
+		return false;
+	}
+}
   </head>
     <body>
         <div id="kotak-tengah">
-        <form action="add2.php" method = "post"> //call the add process
+        <form name="register"action="add2.php" method = "post" onsubmit="return validateform()"> //call the add process
         <div class="mb-3">
         <label for="id" class="form-label">Teacher ID:</label>
         <input type="text" class="form-control" name="id">
@@ -53,6 +94,7 @@
         </div>   
         <input type="submit" class="btn btn-primary" value="Register"> //submit register
         </form>
+	 <button type="button"  class="btn btn-dark"><a href="loginpage.php">Back</a></button>
         </div>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
     </body>
