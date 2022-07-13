@@ -26,7 +26,7 @@
   </head>
     <body>
         <div id="kotak-tengah">
-        <form action="add2.php" method = "post">
+        <form action="add2.php" method = "post"> //call the add process
         <div class="mb-3">
         <label for="id" class="form-label">Teacher ID:</label>
         <input type="text" class="form-control" name="id">
@@ -51,7 +51,7 @@
         <label for="phone" class="form-label">Phone Number:</label>
         <input type="text" class="form-control" name="phone">
         </div>   
-        <input type="submit" class="btn btn-primary" value="Register">
+        <input type="submit" class="btn btn-primary" value="Register"> //submit register
         </form>
         </div>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
