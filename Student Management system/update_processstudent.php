@@ -2,6 +2,7 @@
 include 'conn.php';
 $id = $_GET['id'];
 $newid = $_POST['newid'];
+//send sql statement to the database
 $update = "UPDATE student SET student_id='$_POST[newid]', student_firstname='$_POST[firstname]',
 student_lastname='$_POST[lastname]',student_email='$_POST[email]',
 student_password='$_POST[password]',student_phoneNum='$_POST[phone]'
