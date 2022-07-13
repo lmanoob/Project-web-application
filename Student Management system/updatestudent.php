@@ -23,6 +23,48 @@
          padding: 20px;
         }
     </style>
+  <script>
+    function validateform()
+{
+	var newid= document.register.newid.value;
+	var firstname= document.register.firstname.value;
+	var lastname= document.register.lastname.value;
+	var email= document.register.email.value;
+	var password= document.register.password.value;
+	var phone= document.register.phone.value;
+	
+	if(newid=null||newid=="")
+	{
+		alert("Student Id can't be blank");
+		return false;
+	}
+	else if(firstname=null||firstname=="")
+	{
+		alert("First Name can't be blank");
+		return false;
+	}
+	else if(lastname=null||lastname=="")
+	{
+		alert("Last Name can't be blank");
+		return false;
+	}
+	else if(email=null||email=="")
+	{
+		alert("Email can't be blank");
+		return false;
+	}
+    else if(password=null||password=="")
+	{
+		alert("Password can't be blank");
+		return false;
+	}
+     else if(phone=null||phone=="")
+	{
+		alert("Phone Number can't be blank");
+		return false;
+	}
+}
+    </script>
   </head>
 <body>
 <?php
@@ -35,11 +77,11 @@ where student_id='$id'");
 //display the output
 $row = mysqli_fetch_row($result);
     echo "<div id='kotak-tengah'>";
-    echo "<form action=update_processstudent.php?id=$row[0] method=post>";
+     echo "<form name='register' onsubmit='return validateform()' action=update_processstudent.php?id=$row[0] method=post>";
     
     echo "<div class=mb-3>";
     echo "<label for='newid' class=form-label>Student Id:</label>"; 
-    echo "<input type='text' class=form-control name='newid' value='$row[0]'>";
+    echo "<input type='number' class=form-control name='newid' value='$row[0]'>";
     echo "</div>";
     
     echo "<div class=mb-3>";
@@ -64,7 +106,7 @@ $row = mysqli_fetch_row($result);
     
     echo "<div class=mb-3>";
     echo "<label for='phone' class=form-label>Phone Number:</label>"; 
-    echo "<input type='text' class=form-control name='phone' value='$row[5]'>";
+    echo "<input type='number' class=form-control name='phone' value='$row[5]'>";
     echo "</div>";
     
     echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
