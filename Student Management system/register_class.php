@@ -24,6 +24,18 @@
 		 top: 50%;
         }
     </style>
+<script>
+function validateform()
+{
+	var class_code= document.register.class_code.value;
+	
+	if(class_code=null||class_code=="")
+	{
+		alert("Pick A Class");
+		return false;
+	}
+}
+    </script>
   </head>
 <body>
 <?php
@@ -38,7 +50,7 @@
 	$row2 = mysqli_fetch_row($result);
 	
 	echo "<div id='kotak-tengah'>";
-    echo "<form action='registerclass.php' method='post'>"; //registering for classes form
+    echo "<form name='register' onsubmit='return validateform()' action='registerclass.php' method='post'>"; //registering for classes form
 	
     echo "<div class='mb-3'>";
     echo "<label for='id' class='form-label'>Student ID:</label>"; 
@@ -48,7 +60,7 @@
 	echo "<div class=mb-3>";
 	echo "<label for='class_code'>Pick A Class:</label><br>"; // pick the class
 	echo "<select class='form-select' aria-label='Default select example' name='class_code'>";
-	echo "<option selected>Pick A Class</option>";
+	echo "<option value='' selected>Pick A Class</option>";
 	foreach( $result as $row2 ){
 	$class_code=$row2['class_code'];
 	echo "<option value=".$class_code.">" . $row2['class_code'] . "</option>";} //classcode based on options
