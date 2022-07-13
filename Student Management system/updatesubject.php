@@ -29,8 +29,10 @@
 include 'conn.php';
 $subject_code = $_GET['subject_code'];
 include "./header_teach.html";
+//send sql statement to the database
 $result = mysqli_query($conn, "select * from subject
 where subject_code='$subject_code'");
+//display the output
 $row = mysqli_fetch_row($result);
     echo "<div id='kotak-tengah'>";
     echo "<form action=update_processsubject.php?subject_id=$row[0] method=post>";
@@ -60,6 +62,8 @@ $row = mysqli_fetch_row($result);
     echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
     echo "</html>";
+
+//clear the result & close the connection to the database
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
