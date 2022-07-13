@@ -70,7 +70,7 @@
         <form name="register"action="add2.php" method = "post" onsubmit="return validateform()"> //call the add process
         <div class="mb-3">
         <label for="id" class="form-label">Teacher ID:</label>
-        <input type="text" class="form-control" name="id">
+        <input type="number" class="form-control" name="id">
         </div>
         <div class="mb-3">
         <label for="firstname" class="form-label">First Name:</label>
@@ -86,11 +86,11 @@
         </div>
         <div class="mb-3">
         <label for="password" class="form-label">Password:</label>
-        <input type="text" class="form-control" name="password">
+        <input type="password" class="form-control" name="password">
         </div>  
         <div class="mb-3">
         <label for="phone" class="form-label">Phone Number:</label>
-        <input type="text" class="form-control" name="phone">
+        <input type="number" class="form-control" name="phone">
         </div>   
         <input type="submit" class="btn btn-primary" value="Register"> //submit register
         </form>
