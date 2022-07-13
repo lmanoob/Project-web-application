@@ -57,11 +57,6 @@
 		alert("Password can't be blank");
 		return false;
 	}
-	else if(isNaN(zip))
-	{
-		alert("Zip must be a number");
-		return false;
-	}
      else if(phone=null||phone=="")
 	{
 		alert("Phone Number can't be blank");
