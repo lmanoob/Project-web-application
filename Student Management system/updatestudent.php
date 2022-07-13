@@ -29,8 +29,10 @@
 include 'conn.php';
 $id = $_GET['id'];
 include "./header_teach.html";
+//send sql statement to the database
 $result = mysqli_query($conn, "select * from student
 where student_id='$id'");
+//display the output
 $row = mysqli_fetch_row($result);
     echo "<div id='kotak-tengah'>";
     echo "<form action=update_processstudent.php?id=$row[0] method=post>";
@@ -66,10 +68,12 @@ $row = mysqli_fetch_row($result);
     echo "</div>";
     
     echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
-	echo "</div>";
+    echo "</div>";
     echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
     echo "</html>";
+
+//free the result & close the connection
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
