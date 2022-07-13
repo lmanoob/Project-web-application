@@ -58,7 +58,7 @@ $row = mysqli_fetch_row($result);
     echo "</div>";
     
     echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
-	echo "</div>";
+    echo "</div>";
     echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
     echo "</body>";
     echo "</html>";
