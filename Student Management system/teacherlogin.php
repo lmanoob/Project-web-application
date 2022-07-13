@@ -8,6 +8,7 @@ if(isset($_POST['teacherlogin']))
 {
     $id = $_POST['id'];
     $password = $_POST['password'];
+    //send sql statement to the database 
     $sql = "SELECT * FROM teacher WHERE teacher_id='$_POST[id]' AND teacher_password='$_POST[password]'";
 
     $result = mysqli_query($con, $sql);
