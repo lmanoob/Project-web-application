@@ -23,6 +23,48 @@
          padding: 20px;
         }
     </style>
+ <script>
+     function validateform()
+{
+	var id= document.register.id.value;
+	var firstname= document.register.firstname.value;
+	var lastname= document.register.lastname.value;
+	var email= document.register.email.value;
+	var password= document.register.password.value;
+	var phone= document.register.phone.value;
+	
+	if(id=null||id=="")
+	{
+		alert("Teacher Id can't be blank");
+		return false;
+	}
+	else if(firstname=null||firstname=="")
+	{
+		alert("First Name can't be blank");
+		return false;
+	}
+	else if(lastname=null||lastname=="")
+	{
+		alert("Last Name can't be blank");
+		return false;
+	}
+	else if(email=null||email=="")
+	{
+		alert("Email can't be blank");
+		return false;
+	}
+    else if(password=null||password=="")
+	{
+		alert("Password can't be blank");
+		return false;
+	}
+     else if(phone=null||phone=="")
+	{
+		alert("Phone Number can't be blank");
+		return false;
+	}
+}
+    </script>
   </head>
   <body>
 <?php
@@ -35,7 +77,7 @@
 	//display the output
     	$row = mysqli_fetch_row($result);
 	echo "<div id='kotak-tengah'>";
-    	echo "<form action=updateprof_teacher.php?id=$row[0] method=post>";
+    	 echo "<form name='register' onsubmit='return validateform()' action=updateprof_teacher.php?id=$row[0] method=post>";
 	
 	echo "<div class=mb-3>";
    	echo "<label for='id' class=form-label>Teacher ID:</label>"; 
