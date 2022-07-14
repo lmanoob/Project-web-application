@@ -20,7 +20,9 @@ if(isset($_POST['teacherlogin']))
     }
     else
     {
-        echo "<script type'text/javascript'>alert('Invalid Teacher ID or password!')</script>";  
+                    echo '<script>language="javascript">alert("Invalid Teacher ID or password!");
+          window.location.href="loginpage.php";
+			</script>';
     }
 }
 ?>
