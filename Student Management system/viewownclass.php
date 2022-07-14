@@ -30,11 +30,10 @@
     	echo "<div class=row>";
     	echo "<table class=table>";
     	while ($row = mysqli_fetch_row($result)){
-		echo "<tr class=bg-primary><th>Class Code</th><th scope=col>$row[0]</th></tr>";
-    		echo "<tr class=bg-info><th>Class Name</th><th scope=col>$row[1]</th></tr>";
-   		echo "<tr class=bg-info><th>Number of student</th><th scope=col>$row[2]</th></tr>";
-    		echo "<tr class=bg-info><th>Subject code</th><th scope=col>$row[3]</th></tr>";
-    		echo "<tr class=bg-info><th>Teacher ID</th><th scope=col>$row[4]</th></tr>";
+		echo "<tr class=bg-primary><th>Class Code</th><th>Class Name</th><th>Number of student</th><th>Subject code</th><th>Teacher ID</th></tr>";
+    	echo "<tr class=bg-info><th scope=col>$row[0]</th><th scope=col>$row[1]</th><th scope=col>$row[2]</th><th scope=col>$row[3]</th>
+				<th scope=col>$row[4]</th></tr>";
+	
 	}
 	echo "</table>";
     	echo "</div>";
