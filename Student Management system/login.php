@@ -19,7 +19,9 @@ if(isset($_POST['login']))
     }
     else
     {
-        echo "<script type'text/javascript'>alert('Invalid Student ID or password!')</script>";  // error message if there is no matchable ids or pass
+        echo '<script>language="javascript">alert("Invalid Student ID or password!");
+          window.location.href="loginpage.php";
+			</script>';  // error message if there is no matchable ids or pass
     }
 }
 ?>
