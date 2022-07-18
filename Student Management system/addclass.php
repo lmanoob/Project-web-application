@@ -80,7 +80,7 @@
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
-//link to implement javascript bootsrtap
+<!--link to implement javascript bootsrtap-->
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
 </body>
 </html>
