@@ -111,11 +111,11 @@ $row = mysqli_fetch_row($result);
     
     echo "<input type='submit' class='btn btn-primary' value='UPDATE'></form>";
     echo "</div>";
-    echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>";
-    echo "</body>";
-    echo "</html>";
-
+ 
 //free the result & close the connection
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
+ <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+ </body>
+ </html>
