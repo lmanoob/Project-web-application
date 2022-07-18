@@ -25,7 +25,7 @@
     </style>
 	 <script>
      function validateform()
-{
+	{
 	var id= document.register.id.value;
 	var firstname= document.register.firstname.value;
 	var lastname= document.register.lastname.value;
