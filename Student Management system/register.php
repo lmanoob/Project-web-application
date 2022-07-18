@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> //css for header
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--css for header-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Register</title>
     <style>
@@ -65,7 +65,7 @@
 }
     </script>
   </head>
-    <body>                                         //the body of the page
+    <body>                                         <!--the body of the page-->
         <?php include "./header_teach.html"; ?>
         <div id="kotak-tengah">
          <form name="register"action="add.php" method = "post" onsubmit="return validateform()">
@@ -93,7 +93,7 @@
         <label for="phone" class="form-label">Phone Number:</label>
         <input type="number" class="form-control" name="phone">
         </div>   
-        <input type="submit" class="btn btn-primary" value="Register"> // submit the registration into the database
+        <input type="submit" class="btn btn-primary" value="Register"> <!-- submit the registration into the database-->
         </form>
 	<button type="button"  class="btn btn-dark"><a href="loginpage.php">Back</a></button>
     </div>
