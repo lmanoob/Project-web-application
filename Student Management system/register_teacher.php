@@ -67,7 +67,7 @@
   </head>
     <body>
         <div id="kotak-tengah">
-        <form name="register"action="add2.php" method = "post" onsubmit="return validateform()"> //call the add process
+        <form name="register"action="add2.php" method = "post" onsubmit="return validateform()"> <!--call the add process-->
         <div class="mb-3">
         <label for="id" class="form-label">Teacher ID:</label>
         <input type="number" class="form-control" name="id">
@@ -92,7 +92,7 @@
         <label for="phone" class="form-label">Phone Number:</label>
         <input type="number" class="form-control" name="phone">
         </div>   
-        <input type="submit" class="btn btn-primary" value="Register"> //submit register
+        <input type="submit" class="btn btn-primary" value="Register"> <!--submit register-->
         </form>
 	 <button type="button"  class="btn btn-dark"><a href="loginpage.php">Back</a></button>
         </div>
