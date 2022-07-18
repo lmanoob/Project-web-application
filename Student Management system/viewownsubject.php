@@ -24,7 +24,8 @@
     	echo "<br>";
 	$id= $_SESSION['student_id'];
 	//send the sql statement to the database
-    	$result = mysqli_query($conn, "SELECT * from subject where subject_code IN (select subject_code from class where class_code IN (select class_code from register where student_id='$id'))");
+    	$result = mysqli_query($conn, "SELECT * from subject where subject_code IN 
+	(select subject_code from class where class_code IN (select class_code from register where student_id='$id'))");
     	//display the output
 	echo "<div class=container>";
     	echo "<div class=row>";
